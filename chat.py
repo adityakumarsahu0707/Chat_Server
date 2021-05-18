@@ -9,14 +9,14 @@ def send():
     s=socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     text=input()
     text=text.encode()
-    s.sendto(text, ("192.168.43.114", 1234))  #Current system's IP
+    s.sendto(text, ("192.168.43.114", 1234))  #Remote system's IP
     print("\n")
 #    time.sleep(5)
 
 def recieve():
   while True:
     s=socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    ip="192.168.43.193"
+    ip="192.168.43.193"  #current system IP
     port=1235
     s.bind((ip,port))
     x=s.recvfrom(100)
