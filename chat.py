@@ -9,7 +9,7 @@ def send():
     s=socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     text=input()
     text=text.encode()
-    s.sendto(text, ("192.168.43.114", 1234))
+    s.sendto(text, ("192.168.43.114", 1234))  #Current system's IP
     print("\n")
 #    time.sleep(5)
 
